@@ -3,7 +3,7 @@ const api = (() => {
 
   const _consultWeather = async (lat, lon) => {
     try {
-      const fetchString = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+      const fetchString = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
       const response = await fetch(fetchString, { mode: "cors" });
       const weatherData = await response.json();
       return weatherData;
@@ -14,7 +14,7 @@ const api = (() => {
 
   const _consultCity = async (city) => {
     try {
-      const fetchString = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${key}`;
+      const fetchString = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${key}`;
       const response = await fetch(fetchString, { mode: "cors" });
       const locationData = await response.json();
       if (locationData) return locationData;

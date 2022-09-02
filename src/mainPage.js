@@ -141,7 +141,7 @@ const mainPage = ((weatherImg) => {
     mainFocusContainer.append(weatherIcon, description);
 
     description.textContent = data.description;
-    weatherIcon.src = `http://openweathermap.org/img/wn/${data.icon}@2x.png`;
+    weatherIcon.src = `https://openweathermap.org/img/wn/${data.icon}@2x.png`;
 
     _createDomBlock(data.humidity, "Humidity", detailsContainer, "%");
     _createDomBlock(data.temp, "Temperature", detailsContainer, "°C");
